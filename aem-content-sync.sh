@@ -38,7 +38,7 @@ curl -k -u $1:$2 -X POST $3/crx/packmgr/service/.json/etc/packages/$PACKAGE_GROU
 echo "Adding filter to package on remote instance"
 curl -k -u $1:$2 POST $3/etc/packages/$PACKAGE_GROUP/$PACKAGE_NAME.zip/jcr:content/vlt:definition/filter/f2.rw.html \
 -F"root= $4" \
--Frules="[exclude:/content/dam/hyundai/au/en/models]"
+-Frules="[exclude:/etc]"
 
 # build package
 echo "Building package"
